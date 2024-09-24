@@ -1,0 +1,70 @@
+<%- include('layout/header.ejs') %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto mt-4">
+      <div class="card shadow">
+        <div class="card header bg-danger">
+          <h3 class="text-light">Add New User</h3>
+        </div>
+        <form
+          action="/add"
+          method="post"
+          id="add-form"
+          enctype="multipart/form-data"
+        >
+          <div class="mb-3">
+            <label for="exampleInputEmail1">Name</label>
+            <input
+              name="name"
+              type="text"
+              class="form-control form-control-lg"
+              id="Name"
+              aria-describedby="Name"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              name="email"
+              type="email"
+              class="form-control form-control-lg"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1">Phone</label>
+            <input
+              name="phone"
+              type="text"
+              class="form-control"
+              id="Phone"
+              aria-describedby="Phone"
+              placeholder="Enter Phone"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="customFile">Select Image</label>
+            <input
+              name="image"
+              type="file"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <div class="mb-3 d-grid">
+            <input
+              name="add"
+              type="submit"
+              value="Add User"
+              class="btn btn-danger btn-lg"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <%- include('layout/footer.ejs') %>
+</div>
